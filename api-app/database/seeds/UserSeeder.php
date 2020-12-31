@@ -13,22 +13,13 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             [
-                'first_name' => "Jose",
-                'last_name' => "Tirado",
-                'email' => Str::random(10).'@gmail.com',
+                'first_name' => "admin",
+                'last_name' => "admin",
+                'email' => 'admin'.'@mail.co',
                 'password' => Hash::make('123456'),
                 'api_token' => Str::random(100),
                 'age' => rand(18, 35),
-            ],
-            [
-                'first_name' => "Juan",
-                'last_name' => "Tirado",
-                'email' => Str::random(10).'@gmail.com',
-                'password' => Hash::make('123456'),
-                'api_token' => Str::random(100),
-                'age' => rand(18, 35),
-            ]
-            
+            ],            
         ]);
     }
 }
